@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Criminal Investigation Tracker</title>
+</head>
+<body>
+    <h1>Criminal Investigation Tracker</h1>
+
+    <h2>All Cases</h2>
+
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>ID</th>
+            <th>Crime Type</th>
+            <th>Location</th>
+            <th>Time of Day</th>
+            <th>Evidence</th>
+        </tr>
+
+        {% for case in cases %}
+        <tr>
+            <td>{{ case.id }}</td>
+            <td>{{ case.crime_type }}</td>
+            <td>{{ case.location }}</td>
+            <td>{{ case.time_of_day }}</td>
+            <td>
+                {% if case.evidences %}
+                    <ul>
+                        {% for evidence in case.evidences %}
+                            <li>
+                                <strong>{{ evidence.evidence_type }}</strong> :
+                                {{ evidence.description }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    No evidence added
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</body>
+</html>
