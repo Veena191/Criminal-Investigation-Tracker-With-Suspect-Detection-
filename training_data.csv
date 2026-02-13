@@ -1,0 +1,11 @@
+crime_type,location,time_of_day,evidence_type,evidence_description,suspect
+robbery,area1,night,fingerprint,found on window,1
+murder,area2,evening,blood_sample,matched victim,0
+theft,area1,morning,cctv,low quality footage,0
+robbery,area3,night,weapon,knife recovered,1
+cybercrime,area4,afternoon,laptop,seized for analysis,1
+kidnapping,area5,night,vehicle,abandoned car found,1
+fraud,area2,evening,documents,fake bank papers,0
+theft,area3,morning,fingerprint,partial match,0
+robbery,area2,night,cctv,clear suspect image,1
+cybercrime,area1,afternoon,ip_logs,suspicious IP tracked,1
